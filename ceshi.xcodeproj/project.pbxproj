@@ -15,6 +15,9 @@
 		B7436E9F21266B0200B44768 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7436E9E21266B0200B44768 /* main.m */; };
 		B7436EA921266B0200B44768 /* ceshiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7436EA821266B0200B44768 /* ceshiTests.m */; };
 		B7436EB421266B0200B44768 /* ceshiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7436EB321266B0200B44768 /* ceshiUITests.m */; };
+		B757FA77223631F400CAFAE0 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B757FA76223631F400CAFAE0 /* TestVC.m */; };
+		B757FA7A2236325C00CAFAE0 /* fanhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B757FA782236325B00CAFAE0 /* fanhui@2x.png */; };
+		B757FA7B2236325C00CAFAE0 /* fanhui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B757FA792236325B00CAFAE0 /* fanhui@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		B7436EAF21266B0200B44768 /* ceshiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ceshiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7436EB321266B0200B44768 /* ceshiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ceshiUITests.m; sourceTree = "<group>"; };
 		B7436EB521266B0200B44768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B757FA75223631F400CAFAE0 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		B757FA76223631F400CAFAE0 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		B757FA782236325B00CAFAE0 /* fanhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@2x.png"; sourceTree = "<group>"; };
+		B757FA792236325B00CAFAE0 /* fanhui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,8 @@
 		B7436E8E21266B0100B44768 /* ceshi */ = {
 			isa = PBXGroup;
 			children = (
+				B757FA782236325B00CAFAE0 /* fanhui@2x.png */,
+				B757FA792236325B00CAFAE0 /* fanhui@3x.png */,
 				B7436E8F21266B0100B44768 /* AppDelegate.h */,
 				B7436E9021266B0100B44768 /* AppDelegate.m */,
 				B7436E9221266B0100B44768 /* ViewController.h */,
@@ -110,6 +119,8 @@
 				B7436E9A21266B0200B44768 /* LaunchScreen.storyboard */,
 				B7436E9D21266B0200B44768 /* Info.plist */,
 				B7436E9E21266B0200B44768 /* main.m */,
+				B757FA75223631F400CAFAE0 /* TestVC.h */,
+				B757FA76223631F400CAFAE0 /* TestVC.m */,
 			);
 			path = ceshi;
 			sourceTree = "<group>";
@@ -236,7 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7436E9C21266B0200B44768 /* LaunchScreen.storyboard in Resources */,
+				B757FA7A2236325C00CAFAE0 /* fanhui@2x.png in Resources */,
 				B7436E9921266B0200B44768 /* Assets.xcassets in Resources */,
+				B757FA7B2236325C00CAFAE0 /* fanhui@3x.png in Resources */,
 				B7436E9721266B0100B44768 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B757FA77223631F400CAFAE0 /* TestVC.m in Sources */,
 				B7436E9421266B0100B44768 /* ViewController.m in Sources */,
 				B7436E9F21266B0200B44768 /* main.m in Sources */,
 				B7436E9121266B0100B44768 /* AppDelegate.m in Sources */,
@@ -361,6 +375,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"APPSTORE_PACKAGE=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -433,14 +448,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ECXU495BLB;
 				INFOPLIST_FILE = ceshi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fzsdzijingbaoxian.enterprise.PhotoToBig.ceshi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fzsdhanbaobao.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FZSD_HANBAOBAO_DEV;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,14 +466,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ceshi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fzsdzijingbaoxian.enterprise.PhotoToBig.ceshi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fzsdhanbaobao.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
